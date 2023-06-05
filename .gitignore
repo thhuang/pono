@@ -41,3 +41,6 @@ build
 
 # Misc
 .DS_Store
+gradle/
+gradlew
+gradlew.bat
