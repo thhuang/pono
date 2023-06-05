@@ -1,1 +1,1 @@
-rootProject.name = 'pono'
+include "apps.cashcard"
