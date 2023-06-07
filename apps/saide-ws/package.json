@@ -1,0 +1,8 @@
+{
+  "name": "saide-ws",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {
+    "y-websocket": "^1.5.0"
+  }
+}
