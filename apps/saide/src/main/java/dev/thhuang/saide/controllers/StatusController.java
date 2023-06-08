@@ -10,4 +10,6 @@ public class StatusController {
     public ResponseEntity<String> health() {
         return ResponseEntity.ok("healthy");
     }
+
+    // TODO: add version api
 }
