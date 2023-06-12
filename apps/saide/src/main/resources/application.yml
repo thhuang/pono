@@ -1,0 +1,13 @@
+spring:
+  security:
+    oauth2:
+      # https://docs.spring.io/spring-security/reference/servlet/oauth2/login/core.html
+      client:
+        registration:
+          github:
+            client-id: ${GITHUB_OAUTH_CLIENT_ID}
+            client-secret: ${GITHUB_OAUTH_CLIENT_SECRET}
+            redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}"
+            scope:
+              - user:email
+              - read:user
