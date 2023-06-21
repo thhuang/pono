@@ -28,8 +28,8 @@ public class SecurityConfig {
         http.authorizeHttpRequests(conf -> conf
                 .requestMatchers(
                         "/swagger-ui/**",
-                        "/v3/api-docs/swagger-config",
-                        "/v3/api-docs")
+                        "/swagger/api-docs/swagger-config",
+                        "/swagger/api-docs")
                 .permitAll()
         ).oauth2Login(conf -> conf
                 .successHandler(successHandler).failureHandler(failureHandle)
