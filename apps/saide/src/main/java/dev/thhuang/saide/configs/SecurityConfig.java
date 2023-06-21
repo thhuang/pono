@@ -25,10 +25,14 @@ public class SecurityConfig {
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-        http.authorizeHttpRequests(conf ->
-                conf.anyRequest().authenticated()
-        ).oauth2Login(conf ->
-                conf.successHandler(successHandler).failureHandler(failureHandle)
+        http.authorizeHttpRequests(conf -> conf
+                .requestMatchers(
+                        "/swagger-ui/**",
+                        "/v3/api-docs/swagger-config",
+                        "/v3/api-docs")
+                .permitAll()
+        ).oauth2Login(conf -> conf
+                .successHandler(successHandler).failureHandler(failureHandle)
         );
         return http.build();
     }
