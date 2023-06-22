@@ -11,6 +11,8 @@ spring:
             scope:
               - user:email
               - read:user
+
+# https://springdoc.org/#swagger-ui-properties
 springdoc:
   api-docs:
     path: /swagger/api-docs
